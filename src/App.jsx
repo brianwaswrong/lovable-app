@@ -1,6 +1,8 @@
 import ExperienceJourney from './components/ExperienceJourney';
 import PageSectionNav from './components/PageSectionNav';
 import AIModelSupplyPortfolio from './components/AIModelSupplyPortfolio';
+import githubLogo from './assets/github.png';
+import linkedinLogo from './assets/linkedin.png';
 import lovableLogo from './assets/lovable_logo.png';
 
 function Section({ id, children, className = '' }) {
@@ -8,6 +10,52 @@ function Section({ id, children, className = '' }) {
     <section id={id} className={`section ${className}`}>
       <div className="container">{children}</div>
     </section>
+  );
+}
+
+function EmailIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+      className="icon-link-glyph"
+    >
+      <path
+        d="M3.75 6.75h16.5a.75.75 0 0 1 .75.75v9a.75.75 0 0 1-.75.75H3.75a.75.75 0 0 1-.75-.75v-9a.75.75 0 0 1 .75-.75Z"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.7"
+      />
+      <path
+        d="m4 7 8 6 8-6"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.7"
+      />
+    </svg>
+  );
+}
+
+function CircleLinkButton({ href, label, children }) {
+  const isExternal = href.startsWith('http');
+
+  return (
+    <a
+      href={href}
+      className="icon-link-button"
+      aria-label={label}
+      title={label}
+      {...(isExternal
+        ? { target: '_blank', rel: 'noreferrer' }
+        : {})}
+    >
+      {children}
+    </a>
   );
 }
 
@@ -33,9 +81,26 @@ function Intro() {
           </p> */}
 
           <div className="hero-actions hero-reveal hero-reveal-4">
-            <a href="mailto:brianlei22@gmail.com" className="btn btn-primary">
-              Email Brian
-            </a>
+            <div className="hero-action-group">
+              <CircleLinkButton
+                href="mailto:brianlei22@gmail.com"
+                label="Email brianlei22@gmail.com"
+              >
+                <EmailIcon />
+              </CircleLinkButton>
+              <CircleLinkButton
+                href="https://www.linkedin.com/in/brian-lei"
+                label="LinkedIn"
+              >
+                <img src={linkedinLogo} alt="" aria-hidden="true" className="icon-link-logo" />
+              </CircleLinkButton>
+              <CircleLinkButton
+                href="https://github.com/brianwaswrong"
+                label="GitHub"
+              >
+                <img src={githubLogo} alt="" aria-hidden="true" className="icon-link-logo" />
+              </CircleLinkButton>
+            </div>
             <a href="#experience" className="btn btn-secondary">
               View timeline
             </a>
@@ -83,9 +148,23 @@ function Contact() {
         <p className="section-copy">
           The throughline: building tools for end-users I care about: prior the largest teams, artists, venues in the world and now SMBs and anyone that can imagine magical software.
         </p>
-        <a className="btn btn-primary" href="mailto:brianlei22@gmail.com">
-          Let&apos;s connect
-        </a>
+        <div className="contact-actions">
+          <a className="btn btn-primary" href="mailto:brianlei22@gmail.com">
+            Let&apos;s connect
+          </a>
+          <CircleLinkButton
+            href="https://www.linkedin.com/in/brian-lei"
+            label="LinkedIn"
+          >
+            <img src={linkedinLogo} alt="" aria-hidden="true" className="icon-link-logo" />
+          </CircleLinkButton>
+          <CircleLinkButton
+            href="https://github.com/brianwaswrong"
+            label="GitHub"
+          >
+            <img src={githubLogo} alt="" aria-hidden="true" className="icon-link-logo" />
+          </CircleLinkButton>
+        </div>
       </div>
     </Section>
   );
