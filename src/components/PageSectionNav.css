@@ -1,0 +1,99 @@
+.page-section-nav {
+  position: fixed;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 12;
+  display: grid;
+  gap: 10px;
+}
+
+.page-section-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px 8px 9px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.48);
+  backdrop-filter: blur(10px);
+  transform: translateX(-7px) scale(0.96);
+  transition: transform 180ms ease, color 180ms ease, border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.page-section-link:hover {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.page-section-link.is-active {
+  color: var(--white);
+  border-color: rgba(255, 91, 73, 0.24);
+  background: rgba(22, 10, 9, 0.72);
+  transform: translateX(0) scale(1);
+}
+
+.page-section-tick {
+  width: 14px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.page-section-link.is-active .page-section-tick {
+  width: 28px;
+  background: var(--gatorade-base);
+}
+
+.page-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 920px) {
+  .page-section-nav {
+    left: 50%;
+    top: 12px;
+    transform: translateX(-50%);
+    grid-auto-flow: column;
+    gap: 8px;
+  }
+
+  .page-section-link {
+    padding: 8px 10px;
+    transform: translateY(-4px) scale(0.98);
+  }
+
+  .page-section-link.is-active {
+    transform: translateY(0) scale(1);
+  }
+
+  .page-section-label {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-section-nav {
+    top: 10px;
+    width: min(calc(100vw - 20px), 360px);
+    gap: 8px;
+  }
+
+  .page-section-link {
+    flex: 1 1 0;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .page-section-label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

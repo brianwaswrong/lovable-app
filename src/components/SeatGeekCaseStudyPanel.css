@@ -1,0 +1,132 @@
+.journey-case-study-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.84fr) minmax(0, 1.2fr);
+  gap: 28px;
+  align-items: start;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.journey-case-study-column {
+  min-width: 0;
+}
+
+.journey-case-study-column.is-left {
+  max-width: 640px;
+}
+
+.journey-case-study-frame {
+  min-width: 0;
+}
+
+.journey-case-study-head {
+  margin-bottom: 20px;
+}
+
+.journey-case-study-kicker {
+  margin-bottom: 10px;
+  color: var(--gatorade-light-24);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.journey-case-study-subtitle {
+  max-width: 34ch;
+  margin: 0;
+  color: var(--white);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(24px, 2.8vw, 38px);
+  line-height: 1.08;
+}
+
+.journey-case-study-card-stack {
+  position: relative;
+  min-height: 516px;
+  transition: transform 220ms ease;
+}
+
+.journey-case-study-card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(3, 3, 3, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.26);
+  backdrop-filter: blur(14px);
+  transform-origin: top center;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.journey-case-study-card-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.journey-case-study-card.is-active {
+  border-color: rgba(255, 91, 73, 0.34);
+  box-shadow:
+    0 28px 54px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(255, 91, 73, 0.18) inset;
+}
+
+.journey-case-study-card-index {
+  display: inline-flex;
+  flex: 0 0 auto;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.journey-case-study-card strong {
+  display: block;
+  min-width: 0;
+  color: var(--white);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  line-height: 1.16;
+}
+
+@media (max-width: 1120px) {
+  .journey-case-study-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-case-study-card-stack {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+  .journey-case-study-subtitle {
+    max-width: none;
+    font-size: 28px;
+  }
+
+  .journey-case-study-card-stack {
+    min-height: 488px;
+  }
+
+  .journey-case-study-card {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .journey-case-study-card-row {
+    align-items: flex-start;
+  }
+
+  .journey-case-study-card strong {
+    font-size: 16px;
+  }
+}
