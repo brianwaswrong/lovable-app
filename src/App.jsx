@@ -69,7 +69,7 @@ function Intro() {
             Hi - I&apos;m <span className="accent">Brian.</span>
           </h1>
           <p className="hero-subtitle hero-reveal hero-reveal-3">
-            I'm applying to join Andy & Matias' team at  <span className="accent-soft">Lovable</span>. In ~1 min, I hope this <span className="accent-soft">app</span> shows my fit & thinking, deep care for democratizing software, & how I'd attack Day 0.
+            I'm applying to join Andy & Jaron's team at  <span className="accent-soft">Lovable</span>. In ~1 min, I hope this <span className="accent-soft">app</span> shows my fit & thinking, deep care for democratizing software, & how I'd attack Day 0.
             {/* Enterprise partnerships division from{' '}
             <span className="accent-soft">$3M to $200M</span> in five
             years. */}
