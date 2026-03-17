@@ -163,7 +163,7 @@ export const platformEcosystemDefaultInputs: PlatformEcosystemInputs = {
 };
 
 export const platformEcosystemSheetConfig: SpreadsheetConfig = {
-  documentTitle: 'Platform Ecosystem Economics',
+  documentTitle: 'Platform Partner Economics (Simplified)',
   columnLabels: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
   rowNumbers: Array.from({ length: 11 }, (_, index) => 12 + index),
   columnWidths: [
