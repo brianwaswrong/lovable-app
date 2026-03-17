@@ -62,7 +62,7 @@ export const seatGeekCaseStudyDefaultInputs: SeatGeekCaseStudyInputs = {
 };
 
 export const seatGeekCaseStudySheetConfig: SpreadsheetConfig = {
-  documentTitle: 'SeatGeek Case Study',
+  documentTitle: 'SeatGeek Case Study (Simplified)',
   columnLabels: ['A', 'B', 'C', 'D'],
   rowNumbers: Array.from({ length: 15 }, (_, index) => 12 + index),
   columnWidths: [
