@@ -38,7 +38,7 @@ const defaultInputs: AIModelSupplyInputs = {
 
 const tabs = [
   { id: 'supply-portfolio', label: 'Hyperscaler vs LLM Economics' },
-  { id: 'ecosystem-econ', label: 'Platform Ecosystem Economics' },
+  { id: 'ecosystem-econ', label: 'Platform Partner Economics' },
 ] as const;
 
 export default function AIModelSupplyPortfolio() {
@@ -173,7 +173,7 @@ export default function AIModelSupplyPortfolio() {
                     onCellSelect={handlePortfolioCellSelect}
                     onFormulaInspect={handlePortfolioFormulaInspect}
                     config={{
-                      documentTitle: 'AI Supply Portfolio',
+                      documentTitle: 'Lovable Supply Chain (Simplified)',
                       columnLabels: ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
                       rowNumbers: Array.from({ length: 9 }, (_, index) => 12 + index),
                       rowHeights: [
