@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import ExperienceJourney from './components/ExperienceJourney';
 import PageSectionNav from './components/PageSectionNav';
 import AIModelSupplyPortfolio from './components/AIModelSupplyPortfolio';
@@ -195,6 +196,7 @@ export default function App() {
       <ExperienceJourney />
       <AIModelSupplyPortfolio />
       <Contact />
+      <Analytics />
     </div>
   );
 }
